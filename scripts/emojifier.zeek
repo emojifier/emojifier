@@ -18,8 +18,10 @@ event connection_state_remove(c: connection)
 		c$conn$emoji += "😛";
 	if ( c$conn?$resp_bytes && c$conn$missed_bytes > 0 )
         c$conn$emoji += "🙈";
-    if ( /^/ in c$conn$history )
+    if ( c$conn?$history && /^/ in c$conn$history )
 		c$conn$emoji += "🔄";
 	if ( c?$ssl && ( /SSL/ in c$ssl$version || /TLSv1/ in c$ssl$version ) )
 		c$conn$emoji += "😕";
+	if ( c?$smtp )
+		c$conn$emoji += "📨";
     }
