@@ -20,4 +20,6 @@ event connection_state_remove(c: connection)
         c$conn$emoji += "🙈";
     if ( /^/ in c$conn$history )
 		c$conn$emoji += "🔄";
+	if ( c?$ssl && ( /SSL/ in c$ssl$version || /TLSv1/ in c$ssl$version ) )
+		c$conn$emoji += "😕";
     }
