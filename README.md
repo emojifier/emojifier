@@ -1,4 +1,5 @@
 <img src="docs/emojifier_logo.png" width="240" height="240" />
+
 # Emoji-🔥
 
 #### Set your logs on fire with Emoji-🔥!
