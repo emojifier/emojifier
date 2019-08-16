@@ -14,4 +14,6 @@ event connection_state_remove(c: connection)
         c$conn$emoji += "🥵";
     if ( c$conn?$service && /dns/ in c$conn$service )
 		c$conn$emoji += "🔍";
+	if ( /REJ/ in c$conn$conn_state )
+		c$conn$emoji += "😛";
     }
