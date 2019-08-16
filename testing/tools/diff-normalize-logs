@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+#
+# Replace the #start/end markers in logs with XXXs.
+
+# Get us "modern" regexps with sed.
+if [ `uname` == "Linux" ]; then
+   sed="sed -r"
+else
+   sed="sed -E"
+fi
+
+# The first seds uses a "basic" regexp, the 3rd a "modern:.
+$sed 's/^ *#(open|close).(19|20)..-..-..-..-..-..$/#\1 XXXX-XX-XX-XX-XX-XX/g'
