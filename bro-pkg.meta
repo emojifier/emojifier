@@ -1,6 +1,0 @@
-[package]
-description = Per item expiration for Zeek's intelligence framework.
-credits = Jan Grashoefer <jan.grashoefer@gmail.com>
-tags = intel, expiration
-script_dir = scripts
-test_command = cd testing && btest -d

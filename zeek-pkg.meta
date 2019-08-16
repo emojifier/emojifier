@@ -1,0 +1,8 @@
+[package]
+description = Set your logs on fire with Emoji-🔥!
+credits = Jan Grashoefer <jan.grashoefer@gmail.com>,
+	Matthias Grundmann <matthias.grundmann@kit.edu>,
+	Florian Jacob <florian.jacob@kit.edu>
+tags = emoji, fire, emojifier
+script_dir = scripts
+test_command = cd testing && btest -d
