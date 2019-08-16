@@ -18,4 +18,6 @@ event connection_state_remove(c: connection)
 		c$conn$emoji += "😛";
 	if ( c$conn?$resp_bytes && c$conn$missed_bytes > 0 )
         c$conn$emoji += "🙈";
+    if ( /^/ in c$conn$history )
+		c$conn$emoji += "🔄";
     }
