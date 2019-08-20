@@ -6,10 +6,16 @@ redef record Conn::Info += {
 	emoji: string &default="" &log;
 };
 
+redef record connection += {
+	emoji_trail: string &default="";
+};
+
 redef LogAscii::enable_utf_8 = T;
 
 event connection_state_remove(c: connection)
     {
+    c$conn$emoji = c$emoji_trail;
+
     if ( c$conn?$resp_bytes && c$conn$resp_bytes > 700 )
         c$conn$emoji += "🥵";
     if ( c$conn?$service && /dns/ in c$conn$service )
