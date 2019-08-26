@@ -22,6 +22,8 @@ event connection_state_remove(c: connection)
 		c$conn$emoji += "🔍";
     if ( c$conn?$service && /http/ in c$conn$service )
 		c$conn$emoji += "🏄";
+    if ( c$conn?$service && /sip/ in c$conn$service )
+		c$conn$emoji += "☎️";
 	if ( /REJ/ in c$conn$conn_state )
 		c$conn$emoji += "😛";
 	if ( c$conn?$resp_bytes && c$conn$missed_bytes > 0 )
