@@ -12,14 +12,32 @@ The following emojis are currently supported:
 
 | Emoji | Meaning                                |
 | ----- | -------------------------------------- |
+| 🏄    | HTTP Traffic                           |
 | 🔍    | DNS Traffic                            |
 | 📨    | SMTP Traffic                           |
-| 🏄    | HTTP Traffic                           |
-| 😛    | TCP Connection was rejected            |
+| ☎️    | SIP Traffic                            |
+| ----- | -------------------------------------- |
+| 🥵    | Connection with many bytes             |
 | 🙈    | Some bytes were missed                 |
+| 😛    | TCP Connection was rejected            |
 | 🔄    | Connection direction was flipped       |
-| 🥵    | The responder sent many bytes          |
-| 😕    | Connection uses SSL or TLS 1.0         |
 | 🚨    | There is a notice for this connection  |
-| 💓    | Heartbleed attack detected             |
 | 🥴    | Zeek deems this connection weird       |
+| 🔥    | There was an Intel hit                 |
+
+Furthermore, there is an additional script to emojify default policies.
+Add `@load emojifier/emojify-policies` to your `local.zeek` to enable the following additional emojis:
+
+| Emoji | Meaning                                |
+| ----- | -------------------------------------- |
+| ⌛    | Expired certificate                    |
+| ⏳    | Certificate expires soon               |
+| 😕    | Old TLS version                        |
+| 💓    | Heartbleed attack detected             |
+| 💉    | SQL injection detected                 |
+| 💣    | Vulnerable software version            |
+| 🤔    | Login with guessed SSH password        |
+
+### Coming soon
+
+Prepare yourself for fun with flags 🇩🇪 🇺🇸 🇯🇲! We are about to add Geo-IP-Support...

@@ -3,8 +3,8 @@
 #empty_field	(empty)
 #unset_field	-
 #path	conn
-#open	2019-08-30-16-19-17
+#open	2019-08-30-16-28-20
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	emoji
 #types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	string
-1396976220.644842	CHhAvVGS1DHFjwGM9	173.203.79.216	41459	107.170.241.107	443	tcp	ssl	0.327487	16640	20044	RSTO	-	-	0	ShADadR	22	17804	12	20676	-	💓🥵
-#close	2019-08-30-16-19-17
+1397165496.274611	CHhAvVGS1DHFjwGM9	192.168.4.149	59062	91.227.4.92	443	tcp	ssl	3.515243	448	1366	SF	-	-	0	ShADadfF	13	1136	12	1998	-	😕🥵
+#close	2019-08-30-16-28-20
