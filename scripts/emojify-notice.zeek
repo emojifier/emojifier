@@ -3,9 +3,9 @@
 module Emojifier;
 
 export {
-	const custom_notices: table[Notice::Type] of string = {
+	option custom_notices: table[Notice::Type] of string = {
 		[Weird::Activity] = "🥴",
-		} &redef;
+		};
 }
 
 hook Notice::policy(n: Notice::Info) &priority=-10
