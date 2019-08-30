@@ -16,7 +16,6 @@ The following emojis are currently supported:
 | 🔍    | DNS Traffic                            |
 | 📨    | SMTP Traffic                           |
 | ☎️    | SIP Traffic                            |
-| ----- | -------------------------------------- |
 | 🥵    | Connection with many bytes             |
 | 🙈    | Some bytes were missed                 |
 | 😛    | TCP Connection was rejected            |
