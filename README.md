@@ -37,8 +37,8 @@ Add `@load emojifier/emojify-policies` to your `local.zeek` to enable the follow
 
 ### Usage 😎
 
-The scripts are available as package for the [Zeek Package Manager](https://github.com/zeek/package-manager) and can be installed using the following command: `zeek-pkg install emojifier`
-To set your logs on 🔥 make sure the package is loaded: `zeek-pkg load emojifier`
+The scripts are available as package for the [Zeek Package Manager](https://github.com/zeek/package-manager) and can be installed using the following command: `zkg install emojifier`
+To set your logs on 🔥 make sure the package is loaded: `zkg load emojifier`
 To enable the additional emojis including the corresponding policy scripts add `@load emojifier/emojify-policies` to your `local.zeek`.
 Please note that emojification (utf8 support) is a Zeek-only feature. If you haven't already upgraded to Zeek, 👆 is the reason you should do it!
 
