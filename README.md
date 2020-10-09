@@ -42,10 +42,18 @@ To set your logs on 🔥 make sure the package is loaded: `zkg load emojifier`
 To enable the additional emojis including the corresponding policy scripts add `@load emojifier/emojify-policies` to your `local.zeek`.
 Please note that emojification (utf8 support) is a Zeek-only feature. If you haven't already upgraded to Zeek, 👆 is the reason you should do it!
 
+### Fun with Flags 🇩🇪 🇺🇸 🇯🇲
+
+Of course, we have also added support for Zeek's GeoLocation framework. First you need to make sure that the framework is available (see [Zeek Docs](https://docs.zeek.org/en/current/frameworks/geoip.html)). For a quick test run a command like the following:
+```
+zeek -e "print lookup_location(8.8.8.8);"
+```
+If that works without any issues, you are ready to go. Just add `@load emojifier/emojify-geo` to your `local.zeek`.
+
 ### Extending 🧐
 
 Want to put 🔥? No problem, the emojifier can be easily extended. Just add your custom logic by handling an event and concatenating the additional emoji to the `emoji_trail` string in the `connection` record. The following example adds the 🕳 emoji.
-```
+```zeek
 event connection_state_remove(c: connection) &priority=5
 	{
 	if ( c?$tunnel )
@@ -55,13 +63,9 @@ event connection_state_remove(c: connection) &priority=5
 Note that you need to use a priority > 0 in case you are handling the `connection_state_remove` event.
 
 If you want to extend the Emoji-🔥 based on notices that is even easier. You just need to extend the `Emojifier::custom_notices` table:
-```
+```zeek
 redef custom_notices += {
 	[Notice::Tally] = "🤭",
 };
 ```
 We are looking forward to merge your pull-request 😉
-
-### Coming soon ⏱
-
-Prepare yourself for fun with flags 🇩🇪 🇺🇸 🇯🇲! We are about to add Geo-IP-Support...
